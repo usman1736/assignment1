@@ -1,7 +1,7 @@
 import React from "react";
-import { View, Text, StyleSheet, TouchableOpacity, Alert } from "react-native";
+import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 
-export default function App() {
+export default function HomePage() {
   return (
     <View style={styles.container}>
       {/* Top Navigation Bar */}
@@ -51,7 +51,7 @@ export default function App() {
       <View style={styles.bottomText}>
         <Text style={styles.username}>swishzone</Text>
         <Text style={styles.caption}>
-          Episode 10 | name one thing he's not good at 🏀 #NBA #fyp
+          Episode 10 | name one thing he&apos;s not good at 🏀 #NBA #fyp
         </Text>
       </View>
 
@@ -67,7 +67,7 @@ export default function App() {
       {/* Alert Button under nav */}
       <TouchableOpacity
         style={styles.alertWrapper}
-        onPress={() => Alert.alert("Alert", "Button clicked!")}
+        onPress={() => alert("Alert Button Pressed!")}
       >
         <Text style={styles.alertButton}>Alert</Text>
       </TouchableOpacity>
@@ -76,7 +76,7 @@ export default function App() {
 }
 
 const styles = StyleSheet.create({
-  container: { flex: 1, backgroundColor: "black" },
+  container: { flex: 1, backgroundColor: "black", width: "35%" },
   topBar: {
     flexDirection: "row",
     justifyContent: "center",
