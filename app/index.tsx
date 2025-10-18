@@ -1,4 +1,4 @@
-import HomePage from "@/components/homePage";
+import SignUpPage from "@/components/signUpPage";
 import { View } from "react-native";
 
 export default function Index() {
@@ -10,7 +10,10 @@ export default function Index() {
         alignItems: "center",
       }}
     >
-      <HomePage />
+      {/* HomePage */}
+      {/* <HomePage /> */}
+      {/* Sign Up Page */}
+      <SignUpPage />
     </View>
   );
 }
