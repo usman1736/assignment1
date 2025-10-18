@@ -46,7 +46,7 @@ const styles = StyleSheet.create({
   container: {
     backgroundColor: "white",
     flex: 1,
-    width: "35%",
+    width: "100%",
   },
   containerCloseButton: {
     flexDirection: "row",
@@ -71,14 +71,14 @@ const styles = StyleSheet.create({
   },
   title: {
     fontWeight: "bold",
-    fontSize: 40,
+    fontSize: 30,
     marginBottom: 10,
   },
   signUpLinks: {
     borderWidth: 2,
     borderRadius: 10,
     borderColor: "#ECECEC",
-    width: "40%",
+    width: "70%",
     padding: 9,
     textAlign: "center",
     marginVertical: 10,

@@ -1,5 +1,12 @@
 import React from "react";
-import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import {
+  Platform,
+  StatusBar,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
+} from "react-native";
 
 export default function HomePage() {
   return (
@@ -76,7 +83,12 @@ export default function HomePage() {
 }
 
 const styles = StyleSheet.create({
-  container: { flex: 1, backgroundColor: "black", width: "35%" },
+  container: {
+    flex: 1,
+    backgroundColor: "black",
+    width: "100%",
+    paddingTop: Platform.OS !== "android" ? StatusBar.currentHeight : 0,
+  },
   topBar: {
     flexDirection: "row",
     justifyContent: "center",
@@ -129,6 +141,7 @@ const styles = StyleSheet.create({
     bottom: 60,
     flexDirection: "row",
     justifyContent: "space-around",
+    alignItems: "center",
     width: "100%",
     backgroundColor: "#121212",
     paddingVertical: 10,

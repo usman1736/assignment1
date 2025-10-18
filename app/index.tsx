@@ -1,4 +1,4 @@
-import SignUpPage from "@/components/signUpPage";
+import HomePage from "@/components/homePage";
 import { View } from "react-native";
 
 export default function Index() {
@@ -11,9 +11,9 @@ export default function Index() {
       }}
     >
       {/* HomePage */}
-      {/* <HomePage /> */}
+      <HomePage />
       {/* Sign Up Page */}
-      <SignUpPage />
+      {/* <SignUpPage /> */}
     </View>
   );
 }
