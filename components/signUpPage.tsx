@@ -1,6 +1,6 @@
 import React from "react";
 import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
-
+ 
 const SignUpPage = () => {
   return (
     <View style={styles.container}>
@@ -35,17 +35,45 @@ const SignUpPage = () => {
           />
           <Text>Continue with Google</Text>
         </View>
+        <View style={styles.signUpLinks}>
+          <Image
+            style={styles.icon}
+            source={require("../assets/images/Line.png")}
+          />
+          <Text>Continue with Line</Text>
+        </View>
+        <View style={styles.signUpLinks}>
+          <Image
+            style={styles.icon}
+            source={require("../assets/images/KakaoTalk.png")}
+          />
+          <Text>Continue with KakaoTalk</Text>
+        </View>
+        {/* Description */}
+        <View style={styles.descriptionContainer}>
+          <Text style={styles.description}>
+            By continuing with an account located in
+            <Text style={styles.descriptionHighlights}> Signapore</Text>, 
+            you agree to our <Text style={styles.descriptionHighlights}>Terms of Service </Text> 
+            and acknowledge that you have read our
+            <Text style={styles.descriptionHighlights}> Privacy Policy</Text>.
+          </Text>
+        </View>
+        {/* Log In */}
+        <View style={styles.logInContainer}>
+          <Text style={styles.logInText}>Already haven an account? <Text style={{color: "rgba(225, 108, 165, 1)", fontWeight: "bold"}}>Log in</Text></Text>
+        </View>
       </View>
     </View>
   );
 };
-
+ 
 export default SignUpPage;
-
+ 
 const styles = StyleSheet.create({
   container: {
     backgroundColor: "white",
-    flex: 1,
+    // flex: 1,
     width: "100%",
   },
   containerCloseButton: {
@@ -97,4 +125,30 @@ const styles = StyleSheet.create({
   styleLinksText: {
     justifyContent: "center",
   },
+  description: {
+    textAlign: "center",
+    width: "70%",
+    color: "rgba(0, 0, 0, 0.5)"
+  },
+  descriptionContainer: {
+    alignItems: "center",
+    marginTop: 100,
+  },
+
+  descriptionHighlights: {
+    fontWeight: "bold",
+    color: "rgba(0, 0, 0, 0.6)"
+  },
+
+  logInContainer: {
+    borderTopWidth: 1,
+    width: "100%",
+    padding: 20,
+    marginTop: 15
+  },
+
+  logInText: {
+    fontSize: 17,
+    textAlign: "center"
+  }
 });
